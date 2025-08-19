@@ -2,346 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Legal M1ND — AI Legal Intelligence for Outcome-Driven Strategy</title>
-  <meta name="description" content="Legal M1ND delivers AI-driven legal intelligence that predicts outcomes, profiles decision-makers, and optimizes strategy for law firms and in‑house teams." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://m1nd.in/" />
-  <meta property="og:title" content="Legal M1ND — AI Legal Intelligence" />
-  <meta property="og:description" content="Behavioral & predictive analytics that turn legal data into strategy." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal M1ND | AI-Powered Legal Intelligence</title>
+  <meta name="description" content="Legal M1ND transforms litigation strategy with AI-driven insights for lawyers, firms, and institutions. Increase certainty, move from reactive to proactive, gain multi-jurisdictional insights, and optimize resources." />
+  <meta property="og:title" content="Legal M1ND | AI-Powered Legal Intelligence" />
+  <meta property="og:description" content="Legal M1ND empowers lawyers, firms, and governments with predictive analytics, people intelligence, and multi-jurisdictional insights." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://m1nd.in/" />
-  <meta name="theme-color" content="#0b1220" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <meta property="og:url" content="https://m1nd.in" />
+  <meta property="og:image" content="https://m1nd.in/og-image.png" />
   <style>
-    /* ---------- THEME ---------- */
-    :root{
-      --bg:#0b1220;           /* page background */
-      --bg2:#101a2f;          /* section alt */
-      --panel:#121b30;        /* card background */
-      --muted:#8aa0c6;        /* text muted */
-      --text:#e9f0ff;         /* text */
-      --primary:#4f8cff;      /* brand */
-      --primary-2:#2a5bff;    /* brand dark */
-      --accent:#22d3ee;       /* cyan accent */
-      --success:#22c55e;
-      --warning:#f59e0b;
-      --radius:16px;
-      --shadow:0 10px 30px rgba(7,13,30,.35);
-    }
-    *{box-sizing:border-box} html,body{margin:0;padding:0}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
-    .container{max-width:1200px;margin:0 auto;padding:0 24px}
-
-    /* ---------- NAV ---------- */
-    .nav{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.7);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav__inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.3px}
-    .brand__dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(135deg,var(--primary),var(--accent));box-shadow:0 0 0 3px rgba(79,140,255,.18)}
-    .brand__name{font-size:1.05rem}
-    .nav__menu{display:flex;gap:22px;align-items:center}
-    .nav__link{color:var(--muted);font-weight:600;font-size:.95rem;opacity:.95}
-    .nav__link:hover{color:var(--text)}
-    .btn{display:inline-flex;align-items:center;gap:10px;border:none;border-radius:12px;padding:10px 16px;font-weight:700;cursor:pointer;transition:transform .08s ease, box-shadow .2s ease;background:transparent}
-    .btn:active{transform:translateY(1px)}
-    .btn--primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;box-shadow:0 8px 18px rgba(79,140,255,.28)}
-    .btn--primary:hover{box-shadow:0 10px 24px rgba(79,140,255,.38)}
-    .btn--ghost{border:1px solid rgba(255,255,255,.12);color:var(--text)}
-
-    /* Mobile nav */
-    .nav__toggle{display:none;flex-direction:column;gap:6px;background:transparent;border:none}
-    .nav__toggle span{width:24px;height:2px;background:#c9d5ff;border-radius:2px}
-    @media (max-width: 920px){
-      .nav__menu{display:none;position:fixed;inset:60px 16px auto 16px;background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;flex-direction:column;box-shadow:var(--shadow)}
-      .nav__menu.show{display:flex}
-      .nav__toggle{display:flex}
-    }
-
-    /* ---------- HERO ---------- */
-    .hero{position:relative;padding:88px 0 54px;overflow:hidden}
-    .hero:before{content:"";position:absolute;inset:-20% -10% auto -10%;height:70%;background:radial-gradient(800px 400px at 30% 0%, rgba(79,140,255,.25), transparent 60%), radial-gradient(800px 400px at 70% 10%, rgba(34,211,238,.18), transparent 60%);filter:blur(35px)}
-    .hero__inner{position:relative;z-index:1;text-align:center;max-width:900px;margin:0 auto}
-    .eyebrow{display:inline-block;color:#bcd1ff;font-weight:800;letter-spacing:.16em;font-size:.75rem;text-transform:uppercase;background:rgba(79,140,255,.08);border:1px solid rgba(79,140,255,.25);padding:6px 10px;border-radius:999px}
-    .hero h1{font-size:2.6rem;line-height:1.15;margin:16px 0}
-    .hero p{color:var(--muted);font-size:1.1rem;margin:0 auto 18px}
-    .hero__cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:10px}
-
-    /* ---------- TRUST STRIP ---------- */
-    .trust{padding:16px 0 10px;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);opacity:.95}
-    .trust__row{display:flex;gap:28px;flex-wrap:wrap;align-items:center;justify-content:center;color:#9cb3e2}
-    .pill{border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:8px 12px;font-weight:700;font-size:.8rem}
-
-    /* ---------- SECTIONS / CARDS / GRIDS ---------- */
-    .section{padding:70px 0}
-    .section--alt{background:var(--bg2)}
-    .section__head{text-align:center;margin-bottom:36px}
-    .section__title{font-size:2rem;margin:0 0 8px;color:#d7e4ff}
-    .section__subtitle{color:var(--muted)}
-    .grid{display:grid;gap:18px}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
-    @media (max-width: 900px){.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
-
-    .badge{display:inline-flex;gap:8px;align-items:center;font-weight:800;font-size:.72rem;letter-spacing:.08em;color:#bcd1ff;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:rgba(79,140,255,.08);border:1px solid rgba(79,140,255,.25)}
-
-    /* ---------- METRICS ---------- */
-    .metric{display:flex;flex-direction:column;gap:4px;padding:18px;border-radius:14px;background:linear-gradient(180deg,rgba(79,140,255,.08),rgba(79,140,255,0));border:1px solid rgba(255,255,255,.08)}
-    .metric__num{font-size:1.8rem;font-weight:800}
-    .metric__label{color:var(--muted);font-weight:600}
-
-    /* ---------- CONTACT + EMBEDS ---------- */
-    .contact__row{display:flex;flex-wrap:wrap;gap:20px}
-    .contact__left{flex:1 1 320px}
-    .contact__right{flex:2 1 520px}
-    iframe.gform{width:100%;min-height:780px;border:none;border-radius:16px;background:#fff}
-    .cta-block{display:flex;flex-wrap:wrap;gap:10px}
-
-    /* ---------- FOOTER ---------- */
-    footer{border-top:1px solid rgba(255,255,255,.06);padding:28px 0;color:#9cb3e2}
-
-    /* ---------- REVEAL ANIMATIONS ---------- */
-    [data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .6s ease, transform .6s ease}
-    [data-reveal].show{opacity:1;transform:none}
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #e2e8f0; line-height:1.6;}
+    header {position:sticky;top:0;z-index:100;background:#0f172aeb;backdrop-filter: blur(10px);}
+    nav {display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;}
+    nav .logo {font-size:1.4rem;font-weight:bold;color:#38bdf8;}
+    nav ul {display:flex;list-style:none;}
+    nav ul li {margin-left:1.5rem;}
+    nav ul li a {text-decoration:none;color:#e2e8f0;font-weight:500;transition:color 0.3s;}
+    nav ul li a:hover {color:#38bdf8;}
+    .hero {display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;height:90vh;padding:2rem;background:linear-gradient(135deg,#0f172a,#1e293b);} 
+    .hero h1 {font-size:3rem;color:#38bdf8;margin-bottom:1rem;}
+    .hero p {font-size:1.2rem;max-width:700px;margin-bottom:2rem;}
+    .btn {padding:0.8rem 1.6rem;border:none;border-radius:999px;font-weight:bold;cursor:pointer;transition:all 0.3s;}
+    .btn-primary {background:#38bdf8;color:#0f172a;}
+    .btn-primary:hover {background:#0ea5e9;color:white;}
+    section {padding:5rem 2rem;max-width:1200px;margin:auto;}
+    section h2 {text-align:center;font-size:2rem;margin-bottom:2rem;color:#38bdf8;}
+    .features {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
+    .card {background:#1e293b;padding:2rem;border-radius:1rem;box-shadow:0 0 20px rgba(0,0,0,0.3);transition:transform 0.3s;}
+    .card:hover {transform:translateY(-6px);}
+    .card h3 {margin-bottom:1rem;color:#38bdf8;}
+    .cta {text-align:center;padding:4rem 2rem;background:linear-gradient(135deg,#1e293b,#0f172a);} 
+    .cta h2 {margin-bottom:1rem;}
+    footer {padding:2rem;text-align:center;background:#0f172a;color:#94a3b8;}
+    /* animations */
+    [data-reveal] {opacity:0;transform:translateY(30px);transition:all 0.8s ease-out;}
+    [data-reveal].visible {opacity:1;transform:none;}
   </style>
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="container nav__inner">
-      <a class="brand" href="#home" aria-label="Legal M1ND home">
-        <span class="brand__dot"></span>
-        <span class="brand__name">Legal M1ND</span>
-      </a>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <div class="nav__menu" id="navMenu">
-        <a class="nav__link" href="#problem">Problem</a>
-        <a class="nav__link" href="#solution">Solution</a>
-        <a class="nav__link" href="#features">Features</a>
-        <a class="nav__link" href="#moat">Moat</a>
-        <a class="nav__link" href="#roadmap">Roadmap</a>
-        <a class="nav__link" href="#contact">Contact</a>
-        <a class="btn btn--primary" href="#contact">Book a Demo</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header id="home" class="hero">
-    <div class="container hero__inner" data-reveal>
-      <span class="eyebrow">AI Legal Intelligence Platform</span>
-      <h1>Outcome‑driven strategy for law firms and in‑house teams.</h1>
-      <p>Behavioral profiling + predictive analytics so you can choose the strategy that wins before you step into court or the negotiation room.</p>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#contact">Book a 30‑min Intro</a>
-        <a class="btn btn--ghost" href="#features">Explore Features</a>
-      </div>
-    </div>
+  <header>
+    <nav>
+      <div class="logo">Legal M1ND</div>
+      <ul>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#solution">Solution</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#moat">Our Edge</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <!-- TRUST / USE CASES STRIP -->
-  <section class="trust">
-    <div class="container trust__row" aria-label="use cases">
-      <span class="pill">Civil Litigation</span>
-      <span class="pill">Arbitration</span>
-      <span class="pill">Corporate Disputes</span>
-      <span class="pill">RegTech</span>
-      <span class="pill">Negotiation</span>
-      <span class="pill">Risk & Compliance</span>
-    </div>
+  <section class="hero">
+    <h1 data-reveal>AI-Powered Legal Intelligence</h1>
+    <p data-reveal>Transforming litigation strategy with predictive analytics, people intelligence, and multi-jurisdictional insights. From reactive to proactive — empowering lawyers, firms, and governments to win with certainty.</p>
+    <button class="btn btn-primary" onclick="window.open('https://calendly.com/yourlink','_blank')" data-reveal>Book a Call</button>
   </section>
-
-  <!-- PROBLEM -->
-  <section id="problem" class="section section--alt">
-    <div class="container">
-      <div class="section__head" data-reveal>
-        <span class="badge">The Challenge</span>
-        <h2 class="section__title">Law is data‑rich, but intelligence‑poor.</h2>
-        <p class="section__subtitle">Decisions are still made on intuition. Outcomes remain unpredictable. Resources are misallocated.</p>
+  <section id="problem">
+    <h2 data-reveal>The Problem</h2>
+    <p data-reveal>Legal strategy today is often reactive, resource-heavy, and limited by fragmented data. Lawyers and institutions lack tools that synthesize intelligence across jurisdictions and people dynamics.</p>
+  </section>
+  <section id="solution">
+    <h2 data-reveal>The Solution</h2>
+    <p data-reveal>Legal M1ND leverages AI to bring clarity and foresight into litigation. With predictive insights, people analytics, and jurisdiction intelligence, we move legal decision-making from uncertain and reactive to proactive and optimized.</p>
+  </section>
+  <section id="features">
+    <h2 data-reveal>Key Capabilities</h2>
+    <div class="features">
+      <div class="card" data-reveal>
+        <h3>Increase in Certainty</h3>
+        <p>Our predictive intelligence reduces ambiguity in outcomes, enabling smarter case planning.</p>
       </div>
-      <div class="grid grid-3">
-        <div class="card" data-reveal>
-          <h3>Information Overload</h3>
-          <p class="section__subtitle">Drowning in judgments, filings, and transcripts without clear guidance.</p>
-        </div>
-        <div class="card" data-reveal>
-          <h3>Limited Behavioral Insight</h3>
-          <p class="section__subtitle">Little visibility into judicial / opposing counsel tendencies.</p>
-        </div>
-        <div class="card" data-reveal>
-          <h3>Uncertain Outcomes</h3>
-          <p class="section__subtitle">Forecasting is hard → risk, cost and timelines spike.</p>
-        </div>
+      <div class="card" data-reveal>
+        <h3>From Reactive → Proactive</h3>
+        <p>Shift strategy from defense to foresight with cognitive planning and simulations.</p>
+      </div>
+      <div class="card" data-reveal>
+        <h3>Multi-Jurisdictional Insights</h3>
+        <p>Compare, contrast, and strategize across jurisdictions with unified intelligence.</p>
+      </div>
+      <div class="card" data-reveal>
+        <h3>Resource Optimization</h3>
+        <p>Maximize efficiency of time, talent, and legal spend with data-driven allocation.</p>
       </div>
     </div>
   </section>
-
-  <!-- SOLUTION / METRICS FOR INVESTORS -->
-  <section id="solution" class="section">
-    <div class="container">
-      <div class="section__head" data-reveal>
-        <span class="badge">Our Approach</span>
-        <h2 class="section__title">Intelligence‑first legal strategy.</h2>
-        <p class="section__subtitle">Fuse multi‑modal data → extract behavior → predict outcomes → optimize strategy.</p>
-      </div>
-      <div class="grid grid-3">
-        <div class="metric" data-reveal>
-          <div class="metric__num">↑ Win Probability</div>
-          <div class="metric__label">Behavior‑aware strategies</div>
-        </div>
-        <div class="metric" data-reveal>
-          <div class="metric__num">− TAT & Cost</div>
-          <div class="metric__label">Automation & focus</div>
-        </div>
-        <div class="metric" data-reveal>
-          <div class="metric__num">Client NPS ↑</div>
-          <div class="metric__label">Predictable outcomes</div>
-        </div>
-      </div>
-    </div>
+  <section id="moat">
+    <h2 data-reveal>Our Edge</h2>
+    <p data-reveal>Unlike generic legal tech, Legal M1ND focuses on the human and strategic layer — profiling judges, counsel, and jurisdictions to deliver intelligence that can’t be Googled or guessed. This forms our moat in a crowded legal analytics landscape.</p>
   </section>
-
-  <!-- FEATURES -->
-  <section id="features" class="section section--alt">
-    <div class="container">
-      <div class="section__head" data-reveal>
-        <span class="badge">Capabilities</span>
-        <h2 class="section__title">What Legal M1ND Delivers</h2>
-        <p class="section__subtitle">Built for litigators, arbitration teams, and GC offices.</p>
-      </div>
-      <div class="grid grid-3">
-        <div class="card" data-reveal>
-          <h3>Behavioral Analytics</h3>
-          <p class="section__subtitle">Profiles of judges, arbitrators, and opposing counsel; decision tendencies and style vectors.</p>
-        </div>
-        <div class="card" data-reveal>
-          <h3>Predictive Outcomes</h3>
-          <p class="section__subtitle">Case‑level likelihoods and scenario analysis for strategy selection.</p>
-        </div>
-        <div class="card" data-reveal>
-          <h3>RegTech & Compliance</h3>
-          <p class="section__subtitle">Automated monitoring, risk scoring, and policy mapping.</p>
-        </div>
-        <div class="card" data-reveal>
-          <h3>Document Intelligence</h3>
-          <p class="section__subtitle">Clause‑level exposure; playbook alignment; drafting assistance.</p>
-        </div>
-        <div class="card" data-reveal>
-          <h3>Negotiation Intelligence</h3>
-          <p class="section__subtitle">Offer simulation, counter‑prediction, and BATNA modeling.</p>
-        </div>
-        <div class="card" data-reveal>
-          <h3>Strategy Optimization</h3>
-          <p class="section__subtitle">Resource planning and effort‑to‑impact guidance.</p>
-        </div>
-      </div>
+  <section class="cta" id="contact">
+    <h2 data-reveal>Ready to Collaborate?</h2>
+    <p data-reveal>We’re engaging with incubators, accelerators, VCs, and governments to shape the future of legal intelligence. Let’s connect.</p>
+    <button class="btn btn-primary" onclick="window.open('https://calendly.com/yourlink','_blank')" data-reveal>Book Time with Us</button>
+    <div style="margin-top:2rem;" data-reveal>
+      <iframe src="https://docs.google.com/forms/d/e/your-google-form/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
+    <p style="margin-top:1rem;" data-reveal><a href="mailto:founder@m1nd.in?subject=Request Investor Deck" style="color:#38bdf8;">Request Investor Deck</a></p>
   </section>
-
-  <!-- MOAT / DIFFERENTIATION -->
-  <section id="moat" class="section">
-    <div class="container">
-      <div class="section__head" data-reveal>
-        <span class="badge">Why Us</span>
-        <h2 class="section__title">Defensible moat.</h2>
-        <p class="section__subtitle">Behavioral + judicial AI layer, multi‑modal ingestion, and jurisdiction‑aware models starting UAE → India at scale.</p>
-      </div>
-      <div class="grid grid-3">
-        <div class="card" data-reveal>
-          <h3>Behavioral Graph</h3>
-          <p class="section__subtitle">Entity‑relationship graph of tendencies & outcomes across actors.</p>
-        </div>
-        <div class="card" data-reveal>
-          <h3>Multi‑Modal Pipeline</h3>
-          <p class="section__subtitle">Text, audio, and video fused for richer signals.</p>
-        </div>
-        <div class="card" data-reveal>
-          <h3>Jurisdiction Intelligence</h3>
-          <p class="section__subtitle">Models tuned to venue, bench constitution, and procedural realities.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- CONTACT / LEAD CAPTURE -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="section__head" data-reveal>
-        <span class="badge">Talk to Us</span>
-        <h2 class="section__title">Book a meeting or drop us a line.</h2>
-        <p class="section__subtitle">Founders, accelerators, VC, and government innovation teams welcome.</p>
-      </div>
-      <div class="contact__row">
-        <div class="contact__left card" data-reveal>
-          <h3 style="margin-top:0">Direct Contact</h3>
-          <p class="section__subtitle">We typically respond within one business day.</p>
-          <p>Email: <a href="mailto:info@m1nd.in" style="color:var(--accent)">info@m1nd.in</a></p>
-          <p>Founder: <a href="mailto:Nipun@m1nd.in" style="color:var(--accent)">Nipun@m1nd.in</a></p>
-          <p><a href="https://www.linkedin.com/in/nipun-jain-7046a3162/" target="_blank" rel="noopener" style="color:var(--accent)">LinkedIn</a></p>
-          <div class="cta-block" style="margin-top:8px">
-            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-            <a class="btn btn--primary" href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/92-jain-n/30min'});return false;">Book 30‑min Intro</a>
-            <a class="btn btn--ghost" href="mailto:info@m1nd.in?subject=Request%20Investor%20Deck">Request Investor Deck</a>
-          </div>
-          <div style="margin-top:14px;color:var(--muted);font-size:.9rem">By booking, you agree to be contacted about pilots and partnerships.</div>
-        </div>
-        <div class="contact__right card" data-reveal>
-          <iframe class="gform" title="Contact form" src="https://docs.google.com/forms/d/e/1FAIpQLSdxVDxaej04Lfkrunj48P7GZWeaxS9V59yE3NVT84N4J16Nzw/viewform?embedded=true">Loading…</iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-      <div>© 2025 Legal M1ND</div>
-      <div style="color:#89a2d6">Privacy‑first • No ad tracking</div>
-    </div>
+    <p>© 2025 Legal M1ND | All Rights Reserved</p>
   </footer>
-
-  <!-- Structured data for investors/search -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Legal M1ND",
-    "applicationCategory": "LegalTech",
-    "operatingSystem": "Web",
-    "description": "AI legal intelligence with behavioral analytics and outcome prediction.",
-    "offers": {"@type":"Offer","price":"0","priceCurrency":"USD"},
-    "creator": {"@type":"Organization","name":"Legal M1ND"}
-  }
-  </script>
-
-  <!-- Interactions: smooth scroll, mobile menu, reveal on scroll -->
   <script>
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id=a.getAttribute('href');
-        if(id.length>1){ e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth',block:'start'}); }
-        // close mobile menu on click
-        navMenu.classList.remove('show');
-      })
-    })
-
-    // Mobile nav toggle
-    const navToggle=document.getElementById('navToggle');
-    const navMenu=document.getElementById('navMenu');
-    navToggle?.addEventListener('click',()=>navMenu.classList.toggle('show'));
-
-    // Reveal on scroll
-    const io=new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('show'); io.unobserve(entry.target); } });
-    },{threshold:.2});
-    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+    const revealElements = document.querySelectorAll('[data-reveal]');
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 50) el.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
   </script>
 </body>
 </html>
