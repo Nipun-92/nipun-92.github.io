@@ -3,117 +3,211 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Legal M1ND | AI-Powered Legal Intelligence</title>
-  <meta name="description" content="Legal M1ND transforms litigation strategy with AI-driven insights for lawyers, firms, and institutions. Increase certainty, move from reactive to proactive, gain multi-jurisdictional insights, and optimize resources." />
-  <meta property="og:title" content="Legal M1ND | AI-Powered Legal Intelligence" />
-  <meta property="og:description" content="Legal M1ND empowers lawyers, firms, and governments with predictive analytics, people intelligence, and multi-jurisdictional insights." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://m1nd.in" />
-  <meta property="og:image" content="https://m1nd.in/og-image.png" />
+  <title>Legal M1ND</title>
   <style>
-    * {margin:0;padding:0;box-sizing:border-box;}
-    body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #e2e8f0; line-height:1.6;}
-    header {position:sticky;top:0;z-index:100;background:#0f172aeb;backdrop-filter: blur(10px);}
-    nav {display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;}
-    nav .logo {font-size:1.4rem;font-weight:bold;color:#38bdf8;}
-    nav ul {display:flex;list-style:none;}
-    nav ul li {margin-left:1.5rem;}
-    nav ul li a {text-decoration:none;color:#e2e8f0;font-weight:500;transition:color 0.3s;}
-    nav ul li a:hover {color:#38bdf8;}
-    .hero {display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;height:90vh;padding:2rem;background:linear-gradient(135deg,#0f172a,#1e293b);} 
-    .hero h1 {font-size:3rem;color:#38bdf8;margin-bottom:1rem;}
-    .hero p {font-size:1.2rem;max-width:700px;margin-bottom:2rem;}
-    .btn {padding:0.8rem 1.6rem;border:none;border-radius:999px;font-weight:bold;cursor:pointer;transition:all 0.3s;}
-    .btn-primary {background:#38bdf8;color:#0f172a;}
-    .btn-primary:hover {background:#0ea5e9;color:white;}
-    section {padding:5rem 2rem;max-width:1200px;margin:auto;}
-    section h2 {text-align:center;font-size:2rem;margin-bottom:2rem;color:#38bdf8;}
-    .features {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
-    .card {background:#1e293b;padding:2rem;border-radius:1rem;box-shadow:0 0 20px rgba(0,0,0,0.3);transition:transform 0.3s;}
-    .card:hover {transform:translateY(-6px);}
-    .card h3 {margin-bottom:1rem;color:#38bdf8;}
-    .cta {text-align:center;padding:4rem 2rem;background:linear-gradient(135deg,#1e293b,#0f172a);} 
-    .cta h2 {margin-bottom:1rem;}
-    footer {padding:2rem;text-align:center;background:#0f172a;color:#94a3b8;}
-    /* animations */
-    [data-reveal] {opacity:0;transform:translateY(30px);transition:all 0.8s ease-out;}
-    [data-reveal].visible {opacity:1;transform:none;}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,10,0.95);
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #00e0ff;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      color: #f5f5f5;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00e0ff;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      border-radius: 0 0 2rem 2rem;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .btn-primary {
+      background: #00e0ff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      color: #0a0a0a;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn-primary:hover {
+      background: #00bcd4;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .feature-box {
+      background: #141414;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .feature-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+    }
+    .feature-box h3 {
+      margin-top: 0;
+      color: #00e0ff;
+    }
+    .cta {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, #1a1a1a, #000000);
+      border-radius: 2rem;
+      margin-top: 4rem;
+    }
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .cta p {
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      border: none;
+    }
+    form button {
+      background: #00e0ff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      color: #0a0a0a;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #00bcd4;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #0f0f0f;
+      margin-top: 3rem;
+      color: #aaa;
+    }
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
   <header>
+    <h1>Legal M1ND</h1>
     <nav>
-      <div class="logo">Legal M1ND</div>
-      <ul>
-        <li><a href="#problem">Problem</a></li>
-        <li><a href="#solution">Solution</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#moat">Our Edge</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#features">Features</a>
+      <a href="#insights">Insights</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
+
   <section class="hero">
-    <h1 data-reveal>AI-Powered Legal Intelligence</h1>
-    <p data-reveal>Transforming litigation strategy with predictive analytics, people intelligence, and multi-jurisdictional insights. From reactive to proactive — empowering lawyers, firms, and governments to win with certainty.</p>
-    <button class="btn btn-primary" onclick="window.open('https://calendly.com/yourlink','_blank')" data-reveal>Book a Call</button>
+    <h2>AI-Driven Legal Intelligence</h2>
+    <p>Transforming the way law firms, corporates, and governments make decisions with predictive analytics and multi-jurisdictional insights.</p>
+    <a href="#contact"><button class="btn-primary">Book a Call</button></a>
   </section>
-  <section id="problem">
-    <h2 data-reveal>The Problem</h2>
-    <p data-reveal>Legal strategy today is often reactive, resource-heavy, and limited by fragmented data. Lawyers and institutions lack tools that synthesize intelligence across jurisdictions and people dynamics.</p>
-  </section>
-  <section id="solution">
-    <h2 data-reveal>The Solution</h2>
-    <p data-reveal>Legal M1ND leverages AI to bring clarity and foresight into litigation. With predictive insights, people analytics, and jurisdiction intelligence, we move legal decision-making from uncertain and reactive to proactive and optimized.</p>
-  </section>
+
   <section id="features">
-    <h2 data-reveal>Key Capabilities</h2>
+    <h2 style="text-align:center;">Our Value Pillars</h2>
     <div class="features">
-      <div class="card" data-reveal>
-        <h3>Increase in Certainty</h3>
-        <p>Our predictive intelligence reduces ambiguity in outcomes, enabling smarter case planning.</p>
+      <div class="feature-box reveal">
+        <h3>🔮 Predictive Legal Insights</h3>
+        <p>Enhancing certainty through data-driven case predictions and intelligent foresight.</p>
       </div>
-      <div class="card" data-reveal>
-        <h3>From Reactive → Proactive</h3>
-        <p>Shift strategy from defense to foresight with cognitive planning and simulations.</p>
+      <div class="feature-box reveal">
+        <h3>⚡ From Reactive → Proactive</h3>
+        <p>Shift strategies to anticipate outcomes instead of responding to them.</p>
       </div>
-      <div class="card" data-reveal>
-        <h3>Multi-Jurisdictional Insights</h3>
-        <p>Compare, contrast, and strategize across jurisdictions with unified intelligence.</p>
+      <div class="feature-box reveal">
+        <h3>📊 Resource Optimization</h3>
+        <p>Streamline allocation of legal resources, saving time and costs.</p>
       </div>
-      <div class="card" data-reveal>
-        <h3>Resource Optimization</h3>
-        <p>Maximize efficiency of time, talent, and legal spend with data-driven allocation.</p>
+      <div class="feature-box reveal">
+        <h3>🌍 Multi-Jurisdictional Insights</h3>
+        <p>Gain a competitive edge with cross-border legal intelligence and global analytics.</p>
       </div>
     </div>
   </section>
-  <section id="moat">
-    <h2 data-reveal>Our Edge</h2>
-    <p data-reveal>Unlike generic legal tech, Legal M1ND focuses on the human and strategic layer — profiling judges, counsel, and jurisdictions to deliver intelligence that can’t be Googled or guessed. This forms our moat in a crowded legal analytics landscape.</p>
+
+  <section class="cta" id="insights">
+    <h2>Why Legal M1ND?</h2>
+    <p>Because law isn’t just about cases. It’s about people, data, strategy, and foresight. We empower lawyers, clients, and governments with tools that go beyond traditional legal research.</p>
   </section>
-  <section class="cta" id="contact">
-    <h2 data-reveal>Ready to Collaborate?</h2>
-    <p data-reveal>We’re engaging with incubators, accelerators, VCs, and governments to shape the future of legal intelligence. Let’s connect.</p>
-    <button class="btn btn-primary" onclick="window.open('https://calendly.com/yourlink','_blank')" data-reveal>Book Time with Us</button>
-    <div style="margin-top:2rem;" data-reveal>
-      <iframe src="https://docs.google.com/forms/d/e/your-google-form/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-    <p style="margin-top:1rem;" data-reveal><a href="mailto:founder@m1nd.in?subject=Request Investor Deck" style="color:#38bdf8;">Request Investor Deck</a></p>
+
+  <section id="contact">
+    <h2 style="text-align:center;">Get in Touch</h2>
+    <p style="text-align:center;">Ready to explore collaboration, funding, or pilot programs? Book a slot with us today.</p>
+    <form class="reveal">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
   </section>
+
   <footer>
-    <p>© 2025 Legal M1ND | All Rights Reserved</p>
+    <p>© 2025 Legal M1ND. All rights reserved.</p>
   </footer>
+
   <script>
-    const revealElements = document.querySelectorAll('[data-reveal]');
-    const revealOnScroll = () => {
-      const windowHeight = window.innerHeight;
-      revealElements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < windowHeight - 50) el.classList.add('visible');
-      });
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add('active');
+        }
+      }
+    });
   </script>
 </body>
 </html>
