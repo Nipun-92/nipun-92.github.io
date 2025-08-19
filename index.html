@@ -447,7 +447,7 @@
         </div>
     </section>
 
- <!-- Contact Section -->
+ <!-- Contact Section: Side-by-Side Layout -->
 <section id="contact" class="section section--alt">
   <div class="container">
     <div class="section__header">
@@ -456,87 +456,106 @@
         Ready to transform your legal practice? Let's discuss how Legal M1ND can help.
       </p>
     </div>
-    <div class="contact__content">
-      <div class="contact__info">
+    <div class="contact__row">
+      <!-- Left: Info and Calendly Button -->
+      <div class="contact__info-col">
         <div class="contact__item">
           <h4>Email</h4>
           <a href="mailto:info@m1nd.in">info@m1nd.in</a><br>
           <a href="mailto:nipun@m1nd.in">nipun@m1nd.in</a>
         </div>
-        <div class="contact__item">
+        <div class="contact__item" style="margin-top:1rem;">
           <h4>Phone</h4>
           <p>+971 56 105 0476</p>
         </div>
-        <div class="contact__item">
+        <div class="contact__item" style="margin-top:1rem;">
           <h4>Connect</h4>
           <a href="https://www.linkedin.com/in/nipun-jain-7046a3162/" target="_blank">LinkedIn Profile</a>
         </div>
+        <div class="contact__item" style="margin-top:1.5rem;">
+          <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+          <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+          <a href="#" class="btn btn--primary" style="padding:0.7rem 1.4rem; font-size:1rem;"
+             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/92-jain-n/30min'});return false;">
+            Schedule a Meeting via Calendly
+          </a>
+        </div>
       </div>
-      <!-- Calendly Invite Popup Button -->
-      <div style="margin:2rem 0;">
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-        <a href="#" class="btn btn--primary" style="padding:1rem 2rem; font-size:1.1rem;"
-           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/92-jain-n/30min'});return false;">
-          Schedule a Meeting via Calendly
-        </a>
-      </div>
-      <!-- Responsive Google Forms Embed -->
-      <div class="google-form-responsive">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdxVDxaej04Lfkrunj48P7GZWeaxS9V59yE3NVT84N4J16Nzw/viewform?embedded=true"
-          width="100%"
-          height="950"
-          frameborder="0"
-          style="border:none; max-width:600px; margin:auto; display:block;"
-          allowfullscreen>
-          Loading…
-        </iframe>
+      <!-- Right: Responsive Google Form -->
+      <div class="contact__form-col">
+        <div class="google-form-responsive">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdxVDxaej04Lfkrunj48P7GZWeaxS9V59yE3NVT84N4J16Nzw/viewform?embedded=true"
+            width="100%" height="900" frameborder="0"
+            allowfullscreen style="border:none; border-radius:8px; background:#fff;"
+          >Loading…</iframe>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-/* Responsive Google Form */
-.google-form-responsive {
-  width: 100%;
-  max-width: 650px;
-  margin: 2rem auto 0 auto;
-  padding: 1rem 0;
+/* Container for side-by-side layout */
+.contact__row {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 2rem;
 }
 
+/* Info column */
+.contact__info-col {
+  flex: 1 1 260px;
+  max-width: 340px;
+  min-width: 220px;
+  background: #f9f9f9;
+  padding: 1.7rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 18px rgba(80,120,140,0.07);
+  font-size: 1.1rem;
+}
+
+/* Form column */
+.contact__form-col {
+  flex: 2 1 400px;
+  max-width: 650px;
+  min-width: 260px;
+}
+
+/* Responsive Google Form styling */
 .google-form-responsive iframe {
   width: 100%;
-  min-width: 320px;
-  max-width: 600px;
+  min-width: 220px;
+  max-width: 630px;
   min-height: 650px;
-  height: 950px;
+  height: 900px;
   border: none;
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   background: #fff;
 }
+
+/* Responsive: Stack on mobile */
+@media (max-width: 900px) {
+  .contact__row {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .contact__info-col, .contact__form-col {
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .google-form-responsive iframe {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
 </style>
 
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <span class="footer__logo">Legal M1ND</span>
-                    <p>Empowering Legal Professionals with Strategic Foresight</p>
-                </div>
-                <div class="footer__links">
-                    <p>&copy; 2025 Legal M1ND. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script src="app.js"></script>
 </body>
