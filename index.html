@@ -448,150 +448,146 @@
     </section>
 
  <!-- Contact Section: Side-by-Side Layout -->
-<section id="contact" class="section section--contact-brand">
+<!-- Contact Section: Side-by-Side Layout -->
+<section id="contact" class="section section--alt">
   <div class="container">
-    <div class="section__header" style="text-align:center;">
-      <h2 class="section__title" style="color:#fff;">Get in Touch</h2>
-      <p class="section__subtitle" style="color:#fbe0d2;">Ready to transform your legal practice? Let's discuss how Legal M1ND can help.</p>
+    <div class="section__header">
+      <h2 class="section__title">Get in Touch</h2>
+      <p class="section__subtitle">
+        Ready to transform your legal practice? Let's discuss how Legal M1ND can help.
+      </p>
     </div>
     <div class="contact__row">
-      <!-- Info Sidebar -->
-      <div class="contact__info-col contact__card">
+      <!-- Left: Info + Calendly -->
+      <div class="contact__info-col card">
         <div class="contact__item">
-          <h4 class="contact__heading">Email</h4>
-          <a href="mailto:info@m1nd.in" class="brand-link">info@m1nd.in</a><br>
-          <a href="mailto:nipun@m1nd.in" class="brand-link">nipun@m1nd.in</a>
+          <h4>Email</h4>
+          <a href="mailto:Nipun@M1nd.in" class="info-link">Nipun@M1nd.in</a>
+            <a href="mailto:nipun@m1nd.in" class="brand-link">nipun@m1nd.in</a>
         </div>
         <div class="contact__item" style="margin-top:1.2rem;">
-          <h4 class="contact__heading">Phone</h4>
-          <a href="tel:+971561050476" class="brand-link">+971 56 105 0476</a>
+        
         </div>
         <div class="contact__item" style="margin-top:1.2rem;">
-          <h4 class="contact__heading">Connect</h4>
-          <a href="https://www.linkedin.com/in/nipun-jain-7046a3162/" target="_blank" class="brand-link">
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/nipun-jain-7046a3162/" target="_blank" class="info-link">
             LinkedIn Profile
           </a>
         </div>
-        <div class="contact__item" style="margin-top:1.6rem;">
+        <div class="contact__item" style="margin-top:2rem;">
           <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
           <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-          <a href="#" class="btn btn--brand"
-             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/92-jain-n/30min'});return false;">
-            Schedule Meeting
+          <a href="#" class="btn btn--primary"
+             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/92-jain-n/30min'});return false;"
+             style="margin-top:0.5rem;">
+            Schedule a Meeting
           </a>
         </div>
       </div>
-      <!-- Google Form Embed -->
-      <div class="contact__form-col contact__card">
+      <!-- Right: Google Form Embed -->
+      <div class="contact__form-col card">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSdxVDxaej04Lfkrunj48P7GZWeaxS9V59yE3NVT84N4J16Nzw/viewform?embedded=true"
-          width="100%" height="850" frameborder="0"
-          style="background:#fff; border-radius:14px;"
-          aria-label="Contact/Google Form"
-        >Loading…</iframe>
+          width="100%" height="820" frameborder="0"
+          allowfullscreen
+          style="border:none; border-radius:10px; background:#fff;">
+          Loading…
+        </iframe>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-.section--contact-brand {
-  background: #873e23;
+.section--alt {
+  background: #f7f8fa;
   padding: 70px 0 80px 0;
 }
 
-/* Side-by-side grid */
 .contact__row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2.4rem;
+  gap: 2.5rem;
 }
 
-.contact__card {
+.card {
   background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 24px rgba(90,40,25,0.10);
-  padding: 2.4rem 2rem 2.2rem 2rem;
-  max-width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(60,80,120,0.07);
+  padding: 2.3rem 2rem 2rem 2rem;
+  max-width: 370px;
   min-width: 260px;
-  flex: 1 1 350px;
+  flex: 1 1 330px;
   display: flex;
   flex-direction: column;
-  /* For form: make iFrame expand nicely */
-  justify-content: flex-start;
   align-items: flex-start;
 }
 
 .contact__form-col {
-  max-width: 720px;
-  min-width: 280px;
-  flex: 2 1 540px;
-  padding: 1.6rem 2rem;
+  max-width: 660px;
+  min-width: 290px;
+  flex: 2 1 520px;
+  padding: 1.2rem 2rem;
   box-sizing:border-box;
 }
 
-.contact__heading {
-  color: #873e23;
+.contact__item h4 {
+  color: #2c3552;
   font-weight: 700;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.32rem;
   letter-spacing: 0.03em;
 }
-
-.brand-link {
-  color: #873e23;
+.info-link {
+  color: #2670ff;
   text-decoration: underline;
-  word-break: break-all;
   font-weight: 500;
-  transition: color 0.15s;
+  transition: color 0.13s;
 }
-.brand-link:hover {
-  color: #db6220;
-  text-decoration:underline;
-}
-
-.btn--brand {
-  background: #873e23;
+.info-link:hover { color: #1741a6; }
+.btn--primary {
+  background: #2670ff;
   color: #fff;
-  border: none;
-  border-radius: 7px;
-  padding: 1rem 1.7rem;
-  font-size: 1.09rem;
-  font-weight: 600;
-  box-shadow: 0 2px 11px rgba(90,40,25,0.08);
-  cursor: pointer;
-  transition: background 0.14s;
-  text-align: center;
+  border-radius: 5px;
+  padding: 0.95rem 1.5rem;
+  font-size:1rem;
+  font-weight:600;
   display: inline-block;
-}
-.btn--brand:hover {
-  background: #71331a;
-}
-
-/* Style Google Form embed area */
-.contact__form-col iframe {
-  margin-top: .3rem;
+  text-align: center;
   border: none;
-  box-shadow: 0 2px 12px rgba(90,40,25,0.11);
+  cursor: pointer;
+  box-shadow: 0 2px 11px rgba(90,120,225,0.06);
+  transition: background 0.14s;
+  text-decoration: none;
+}
+.btn--primary:hover {
+  background: #1741a6;
+}
+.contact__form-col iframe {
   width: 100%;
+  border-radius: 10px;
+  min-width: 200px;
+  min-height: 620px;
+  height: 820px;
   background: #fff;
-  border-radius: 14px;
 }
 
 /* Responsive stacking for mobile */
-@media (max-width: 990px) {
+@media (max-width: 960px) {
   .contact__row {
     flex-direction: column;
-    gap: 2.6rem;
+    gap: 2.3rem;
   }
   .contact__form-col, .contact__info-col {
     max-width: 100%;
     min-width: 0;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-right:0;
+    padding-left:0;
   }
   .contact__form-col iframe {
+    min-width: 0;
     max-width: 100%;
+    min-height: 620px;
   }
 }
 </style>
