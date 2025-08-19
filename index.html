@@ -2,110 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Legal M1ND - AI Legal Intelligence</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Legal M1ND – AI Legal Intelligence</title>
+  <meta name="theme-color" content="#0b1220" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .fade-in {
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    :root { --brand:#2563eb; --brand-2:#38bdf8; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    .glass { background: rgba(2,6,23,0.6); backdrop-filter: blur(10px); }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-  <!-- Navbar -->
-  <header class="fixed w-full bg-white shadow-md z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="text-2xl font-extrabold text-blue-700">Legal M1ND</h1>
-      <nav class="space-x-6 font-semibold">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#features" class="hover:text-blue-600">Features</a>
-        <a href="#form" class="hover:text-blue-600">Apply</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
+<body class="bg-slate-950 text-slate-100">
+  <!-- Nav -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#top" class="text-xl font-extrabold tracking-tight"><span class="text-slate-100">Legal</span> <span class="text-sky-400">M1ND</span></a>
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-300">
+        <a href="#about" class="hover:text-sky-400">About</a>
+        <a href="#features" class="hover:text-sky-400">Capabilities</a>
+        <a href="#contact" class="hover:text-sky-400">Contact</a>
+        <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/92-jain-n/30min'});return false;" class="rounded-full px-5 py-2.5 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold shadow">
+          Book 1:1
+        </button>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="pt-32 pb-20 bg-gradient-to-r from-blue-700 to-blue-500 text-white text-center fade-in">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Revolutionizing Legal Intelligence with AI</h2>
-      <p class="text-lg md:text-xl mb-8">Empowering law firms, corporates, and governments with predictive insights, people analytics, and strategic intelligence.</p>
-      <a href="#form" class="bg-white text-blue-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition">Apply Now</a>
+  <!-- Hero -->
+  <section id="top" class="pt-32 pb-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+        AI-Powered Legal Intelligence for <span class="text-sky-400">Predictable</span> Outcomes
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+        Increase certainty with predictive legal insights, move from reactive → proactive, gain multi-jurisdictional visibility, and optimize resources across your practice.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/92-jain-n/30min'});return false;" class="rounded-full px-6 py-3 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold shadow-lg">
+          Book a 1:1 Call
+        </button>
+        <a href="#contact" class="rounded-full px-6 py-3 border border-slate-700 hover:border-sky-500 hover:text-sky-400 font-semibold">
+          Apply / Contact
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 max-w-6xl mx-auto px-6 fade-in">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+  <!-- About -->
+  <section id="about" class="py-16">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h3 class="text-3xl font-bold mb-4 text-blue-700">About Legal M1ND</h3>
-        <p class="text-lg mb-6">Legal M1ND is an AI-powered platform designed to transform how legal professionals and organizations approach litigation, compliance, and strategic decision-making.</p>
-        <ul class="space-y-3 text-gray-700 list-disc pl-5">
-          <li>People Profiling: Judges, lawyers, clients, experts</li>
-          <li>Predictive Case & Outcome Analysis</li>
-          <li>Multi-Jurisdictional Regulatory Tech</li>
-          <li>Resource Optimization & Legal Strategy</li>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">About Legal M1ND</h2>
+        <p class="text-slate-300 mb-6">We blend behavioral science with AI to transform how legal teams plan, negotiate, and litigate. Our platform profiles decision-makers, forecasts outcomes, and highlights strategic paths that maximize the probability of success.</p>
+        <ul class="text-slate-300 space-y-2 list-disc pl-5">
+          <li>Predictive case, judge, and counsel analytics</li>
+          <li>Cross-border regulatory & compliance intelligence</li>
+          <li>Optimization of teams, spend, and timelines</li>
         </ul>
       </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1555371363-1c1df07ff3c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="AI Legal Tech" class="rounded-2xl shadow-lg">
+      <div class="rounded-2xl overflow-hidden ring-1 ring-slate-800">
+        <img src="https://images.unsplash.com/photo-1555371363-1c1df07ff3c9?auto=format&fit=crop&w=1400&q=80" alt="AI & Law" class="w-full h-full object-cover" />
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="py-20 bg-gray-100 fade-in">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-12 text-blue-700">Key Advantages</h3>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-3">Predictive Legal Insights</h4>
-          <p class="text-gray-600">Leverage AI to forecast case outcomes and litigation pathways with higher certainty.</p>
+  <!-- Capabilities / Pillars -->
+  <section id="features" class="py-16 bg-slate-900/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Core Value Pillars</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass rounded-2xl p-6 ring-1 ring-slate-800 hover:ring-sky-600 transition">
+          <h3 class="text-xl font-semibold text-sky-400 mb-2">🔮 Predictive Legal Insights</h3>
+          <p class="text-slate-300">Reduce ambiguity with outcome forecasting and strategy simulation.</p>
         </div>
-        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-3">From Reactive → Proactive</h4>
-          <p class="text-gray-600">Shift legal strategy from reactive defense to proactive, data-driven planning.</p>
+        <div class="glass rounded-2xl p-6 ring-1 ring-slate-800 hover:ring-sky-600 transition">
+          <h3 class="text-xl font-semibold text-sky-400 mb-2">⚡ Reactive → Proactive</h3>
+          <p class="text-slate-300">Shift from firefighting to foresight with early signals and planning.</p>
         </div>
-        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-3">Resource Optimization</h4>
-          <p class="text-gray-600">Optimize allocation of time, people, and budgets to maximize case efficiency.</p>
+        <div class="glass rounded-2xl p-6 ring-1 ring-slate-800 hover:ring-sky-600 transition">
+          <h3 class="text-xl font-semibold text-sky-400 mb-2">📊 Resource Optimization</h3>
+          <p class="text-slate-300">Allocate time, talent, and budgets using evidence, not intuition.</p>
         </div>
-        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-3">Multi-Jurisdictional Insights</h4>
-          <p class="text-gray-600">Compare and analyze cases across jurisdictions to strengthen strategies globally.</p>
+        <div class="glass rounded-2xl p-6 ring-1 ring-slate-800 hover:ring-sky-600 transition">
+          <h3 class="text-xl font-semibold text-sky-400 mb-2">🌍 Multi‑Jurisdictional Insights</h3>
+          <p class="text-slate-300">Compare venues and strategies across jurisdictions in one view.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Google Form Section -->
-  <section id="form" class="py-20 max-w-5xl mx-auto px-6 fade-in">
-    <h3 class="text-3xl font-bold text-center mb-8 text-blue-700">Apply to Connect</h3>
-    <div class="bg-white rounded-2xl shadow-md p-6">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxVDxaej04Lfkrunj48P7GZWeaxS9V59yE3NVT84N4J16Nzw/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0" class="rounded-xl">Loading…</iframe>
-    </div>
-  </section>
+  <!-- Contact / Booking -->
+  <section id="contact" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Get in Touch</h2>
+      <p class="text-center text-slate-300 mb-10">Book a 1:1 call or share details via the form — we’ll respond within 24 hours.</p>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-100 fade-in">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-6 text-blue-700">Contact Us</h3>
-      <p class="text-lg mb-6">For partnerships, funding opportunities, or inquiries, reach out to us directly:</p>
-      <a href="mailto:info@M1nd.in" class="inline-block bg-blue-700 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-blue-600 transition">info@M1nd.in</a>
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Calendly Inline -->
+        <div class="rounded-2xl ring-1 ring-slate-800 overflow-hidden bg-slate-900/50">
+          <div class="p-5 border-b border-slate-800 flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Schedule a 1:1 with Us</h3>
+            <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/92-jain-n/30min'});return false;" class="rounded-full px-4 py-2 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold">Open Popup</button>
+          </div>
+          <div class="calendly-inline-widget" data-url="https://calendly.com/92-jain-n/30min?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:760px;"></div>
+        </div>
+
+        <!-- Google Form -->
+        <div class="rounded-2xl ring-1 ring-slate-800 overflow-hidden bg-slate-900/50">
+          <div class="p-5 border-b border-slate-800">
+            <h3 class="text-lg font-semibold">Share Your Details</h3>
+          </div>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxVDxaej04Lfkrunj48P7GZWeaxS9V59yE3NVT84N4J16Nzw/viewform?embedded=true" class="w-full" style="height:1100px;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+      </div>
+
+      <!-- Email CTA -->
+      <div class="text-center mt-10">
+        <p class="text-slate-300 mb-3">Prefer email?</p>
+        <a href="mailto:info@M1nd.in" class="inline-flex items-center gap-2 rounded-full px-6 py-3 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold shadow">
+          info@M1nd.in
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-blue-700 text-white py-6 text-center">
-    <p>© 2025 Legal M1ND. All Rights Reserved.</p>
+  <footer class="border-t border-slate-800/60 bg-slate-950 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-slate-400">© 2025 Legal M1ND. All rights reserved.</p>
+      <div class="text-slate-400">Built for incubators • VCs • accelerators • gov</div>
+    </div>
   </footer>
+
+  <!-- Calendly floating badge with brand colors -->
+  <script>
+    window.addEventListener('load', function () {
+      if (window.Calendly) {
+        Calendly.initBadgeWidget({
+          url: 'https://calendly.com/92-jain-n/30min',
+          text: 'Schedule time with me',
+          color: '#2563eb',        // Tailwind blue-600
+          textColor: '#ffffff',
+          branding: false
+        });
+      }
+    });
+  </script>
 </body>
 </html>
