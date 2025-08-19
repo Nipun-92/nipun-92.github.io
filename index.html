@@ -447,48 +447,81 @@
         </div>
     </section>
 
-   <!-- Contact Section -->
+ <!-- Contact Section -->
 <section id="contact" class="section section--alt">
-    <div class="container">
-        <div class="section__header">
-            <h2 class="section__title">Get in Touch</h2>
-            <p class="section__subtitle">
-                Ready to transform your legal practice? Let's discuss how Legal M1ND can help.
-            </p>
-        </div>
-        <div class="contact__content">
-            <div class="contact__info">
-                <div class="contact__item">
-                    <h4>Email</h4>
-                    <a href="mailto:info@m1nd.in">info@m1nd.in</a><br>
-                    <a href="mailto:nipun@m1nd.in">nipun@m1nd.in</a>
-                </div>
-                <div class="contact__item">
-                    <h4>Phone</h4>
-                    <p>+971 56 105 0476</p>
-                </div>
-                <div class="contact__item">
-                    <h4>Connect</h4>
-                    <a href="https://www.linkedin.com/in/nipun-jain-7046a3162/" target="_blank">LinkedIn Profile</a>
-                </div>
-            </div>
-            <!-- Calendly Invite Popup Button -->
-            <div style="margin: 2rem 0;">
-                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-                <a href="#" class="btn btn--primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/92-jain-n/30min'});return false;">
-                    Schedule a Meeting via Calendly
-                </a>
-            </div>
-            <!-- Google Forms Embed -->
-            <div style="margin-top:2rem;">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxVDxaej04Lfkrunj48P7GZWeaxS9V59yE3NVT84N4J16Nzw/viewform?embedded=true"
-                        width="100%" height="824"
-                        frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title">Get in Touch</h2>
+      <p class="section__subtitle">
+        Ready to transform your legal practice? Let's discuss how Legal M1ND can help.
+      </p>
     </div>
+    <div class="contact__content">
+      <div class="contact__info">
+        <div class="contact__item">
+          <h4>Email</h4>
+          <a href="mailto:info@m1nd.in">info@m1nd.in</a><br>
+          <a href="mailto:nipun@m1nd.in">nipun@m1nd.in</a>
+        </div>
+        <div class="contact__item">
+          <h4>Phone</h4>
+          <p>+971 56 105 0476</p>
+        </div>
+        <div class="contact__item">
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/nipun-jain-7046a3162/" target="_blank">LinkedIn Profile</a>
+        </div>
+      </div>
+      <!-- Calendly Invite Popup Button -->
+      <div style="margin:2rem 0;">
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <a href="#" class="btn btn--primary" style="padding:1rem 2rem; font-size:1.1rem;"
+           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/92-jain-n/30min'});return false;">
+          Schedule a Meeting via Calendly
+        </a>
+      </div>
+      <!-- Responsive Google Forms Embed -->
+      <div class="google-form-responsive">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdxVDxaej04Lfkrunj48P7GZWeaxS9V59yE3NVT84N4J16Nzw/viewform?embedded=true"
+          width="100%"
+          height="950"
+          frameborder="0"
+          style="border:none; max-width:600px; margin:auto; display:block;"
+          allowfullscreen>
+          Loading…
+        </iframe>
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+/* Responsive Google Form */
+.google-form-responsive {
+  width: 100%;
+  max-width: 650px;
+  margin: 2rem auto 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.google-form-responsive iframe {
+  width: 100%;
+  min-width: 320px;
+  max-width: 600px;
+  min-height: 650px;
+  height: 950px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  background: #fff;
+}
+</style>
+
 
     <!-- Footer -->
     <footer class="footer">
